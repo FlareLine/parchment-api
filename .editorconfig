@@ -1,0 +1,11 @@
+root = true
+
+[*]
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+
+[*.{rs}]
+tab_width = 2
+indent_size = tab
+indent_style = space
