@@ -1,5 +1,5 @@
 [package]
-name = "create_post"
+name = "get_post"
 version = "0.1.0"
 authors = ["Ethan Wright <ethan@flareline.com>"]
 edition = "2018"

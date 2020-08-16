@@ -21,11 +21,11 @@ struct ThinPost {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-  lambda!(create_post);
+  lambda!(get_post);
   Ok(())
 }
 
-fn create_post(data: PostContent, _cxt: Context) -> Result<ThinPost, HandlerError> {
+fn get_post(data: PostContent, _cxt: Context) -> Result<ThinPost, HandlerError> {
   Ok(ThinPost {
     id: Uuid::new_v4(),
     title: data.title,

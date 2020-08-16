@@ -22,9 +22,9 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Build in release mode and test
-        run: cd src && cargo build --release --all-features && cargo test --release --all-features
+        run: cd src && cargo build --release --all-features --target x86_64-unknown-linux-musl && cargo test --release --all-features --target x86_64-unknown-linux-musl
       - name: Package up bootstrap into workflow artifact
         uses: actions/upload-artifact@v2
         with:
           name: Rust bootstrap
-          path: target/release/bootstrap
+          path: target/x86_64-unknown-linux-musl/release/bootstrap

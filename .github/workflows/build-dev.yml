@@ -21,5 +21,5 @@ jobs:
             ~/.cargo/git
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-      - name: Build in release mode and test
+      - name: Build entire workspace in release mode and test
         run: cd src && cargo build --release --all-features && cargo test --release --all-features

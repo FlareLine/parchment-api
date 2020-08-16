@@ -1,4 +1,5 @@
 [workspace]
 members = [
-    "create_post",
+  "create_post",
+  "get_post"
 ]
